@@ -7,6 +7,7 @@
   padding: 92px 50px 96px 50px;
   font-size: 18px;
 }
+
 .menu {
   grid-area: menu;
   justify-self: start;
@@ -77,21 +78,21 @@ a.menu_list-item_selected {
 }
 
 .cover_top-left-text {
-  font-size: inherit;
   justify-self: flex-start;
   align-self: flex-start;
+  font-size: inherit;
 }
 
 .cover_center-text {
-  font-size: inherit;
   justify-self: center;
   align-self: center;
+  font-size: inherit;
 }
 
 .cover_bottom-right-text {
-  font-size: inherit;
   justify-self: flex-end;
   align-self: flex-end;
+  font-size: inherit;
 }
 
 .cover__description {
@@ -187,8 +188,8 @@ a.menu_list-item_selected {
   font-size: 22px;
   line-height: 120%;
   text-decoration: underline;
-  text-transform: uppercase;
   text-underline-offset: 4px;
+  text-transform: uppercase;
 }
 
 .card__text {
