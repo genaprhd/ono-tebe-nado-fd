@@ -1,56 +1,54 @@
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
-  grid-template-areas: "menu header_logo address";
   align-items: center;
-  height: 291px;
-  padding: 92px 50px 96px 50px;
+  padding: 91px 50px;
   font-size: 18px;
 }
 
 .menu {
-  grid-area: menu;
+  grid-column: 1;
   justify-self: start;
 }
 
-.menu_list {
+ul.menu_list {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 32.6px;
-  margin-top: -3px;
+  gap: 32.8px;
   text-transform: lowercase;
-  list-style: none;
-}
-
-.menu_list-item {
-  text-decoration: underline;
   list-style: circle;
+  text-underline-offset: 4px;
 }
 
-a.menu_list-item_selected {
+li a.menu_list-item_selected {
+  list-style: none;
   text-decoration: none;
 }
 
+li.menu_list-item {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .header-logo {
-  grid-area: header_logo;
+  grid-column: 2;
   align-self: center;
   width: 148px;
   height: 105px;
 }
 
 .address {
-  grid-area: address;
+  grid-column: 3;
   justify-self: end;
+  align-self: stretch;
   width: 240px;
-  height: 98px;
+  margin-top: 3px;
   font-style: normal;
-  line-height: 24px;
+  line-height: 1.36em;
 }
 
 .cover {
   position: relative;
-  z-index: -2;
+  z-index: 1;
   color: white;
   background-image: url(/images/cover.jpg);
   background-position: center;
@@ -59,7 +57,8 @@ a.menu_list-item_selected {
 
 .overlay {
   position: absolute;
-  z-index: -1;
+  inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -67,9 +66,10 @@ a.menu_list-item_selected {
 }
 
 .cover_text-container {
+  position: inherit;
   display: grid;
+  gap: 17px;
   box-sizing: content-box;
-  height: 385px;
   padding: 165px 20px 0 50px;
   font-weight: 700;
   font-size: 100px;
@@ -80,29 +80,26 @@ a.menu_list-item_selected {
 .cover_top-left-text {
   justify-self: flex-start;
   align-self: flex-start;
-  font-size: inherit;
 }
 
 .cover_center-text {
   justify-self: center;
   align-self: center;
-  font-size: inherit;
 }
 
 .cover_bottom-right-text {
   justify-self: flex-end;
   align-self: flex-end;
-  font-size: inherit;
 }
 
 .cover__description {
+  position: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 1000px;
-  height: 51px;
   margin: auto;
-  padding: 130px 0px 76px 0px;
+  padding: 108px 0px 49px 0px;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 0.84em;
@@ -111,7 +108,7 @@ a.menu_list-item_selected {
 .bet-button {
   width: 256px;
   height: 51px;
-  border: solid 1px white;
+  border: solid 1px currentColor;
   color: inherit;
   font-weight: 500;
   text-transform: uppercase;
@@ -120,8 +117,8 @@ a.menu_list-item_selected {
 
 .lots {
   width: 1052px;
-  height: 723px;
   margin: 180px auto 0 auto;
+  
 }
 
 .lots__heading {
@@ -129,91 +126,80 @@ a.menu_list-item_selected {
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
-
 }
 
 .lots__card-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: 596px;
-  margin-top: 27px;
   color: white;
 }
 
 .lots__card-list-item {
+  margin-top: 27px;
+  position: relative;
+  z-index: 1;
   width: 334px;
-  height: 100%;
-  max-height: 596px;
-  list-style: none;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
-  position: relative;
-  z-index: -2;
   background-image: url(/images/card-lot-01.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
-  position: relative;
-  z-index: -2;
   background-image: url(/images/card-lot-02.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
-  position: relative;
-  z-index: -2;
   background-image: url(/images/card-lot-03.jpg);
-  background-position: center;
-  background-size: cover;
 }
 
 .card__text-container {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   width: 254px;
-  height: 500px;
+  min-height: 500px;
   margin: 48px auto;
 }
 
 .card__title {
+  margin-top: 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
-  text-decoration: underline;
-  text-underline-offset: 4px;
   text-transform: uppercase;
 }
 
 .card__text {
+  margin-bottom: 0;
   font-size: 20px;
   line-height: 120%;
+  text-decoration: none;
 }
 
 .lots__look-more-link {
-  position: absolute;
-  min-height: 23px;
-  margin-top: 30px;
-  margin-left: 40px;
+  display: block;
+  margin: 30px auto auto 40px;
   font-size: 20px;
+  text-decoration: underline;
   text-underline-offset: 5px;
 }
 
 .about {
   display: grid;
-  grid-template-columns: 334px repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 336px repeat(2, 1fr) 5px;
+  grid-template-rows: 1fr 0.6fr 1.4fr;
   justify-content: center;
   column-gap: 21px;
   width: 1052px;
-  height: 595px;
   margin: 155px auto 0 auto;
 }
 
@@ -230,12 +216,14 @@ a.menu_list-item_selected {
   background-color: black;
 }
 .about__logo {
-  width: 141.55px;
-  height: 112.55px;
+  width: 150px;
+  height: 120px;
 }
+
 .about__column {
   margin: auto;
 }
+
 .about__title {
   grid-column: 2 / 4;
   grid-row: 1;
@@ -250,10 +238,15 @@ a.menu_list-item_selected {
 .about__text {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
-  margin-top: 7px;
+  align-self: top;
+  margin-top: 5px;
   margin-left: 3px;
   font-size: 20px;
   line-height: 24px;
+}
+
+.about__text + .about__text {
+  grid-row: 3 / 4;
 }
 
 .footer {
@@ -261,9 +254,7 @@ a.menu_list-item_selected {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "address menu social";
   width: 100%;
-  height: 251px;
-  margin-top: 30px;
-  padding: 115px 50px;
+  padding: 20px 50px;
   font-size: 18px;
 }
 
@@ -277,12 +268,10 @@ a.menu_list-item_selected {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 22px;
   text-transform: lowercase;
   list-style: none;
 }
 .footer__menu-list-item {
-  height: 21px;
   text-decoration: underline;
 }
 
@@ -296,7 +285,6 @@ a.menu_list-item_selected {
   justify-self: end;
   justify-content: space-between;
   width: 240px;
-  height: 48px;
   list-style: none;
 }
 
