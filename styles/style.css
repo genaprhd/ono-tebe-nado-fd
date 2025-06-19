@@ -19,17 +19,18 @@ ul.menu_list {
   text-underline-offset: 4px;
 }
 
+.menu_list-item {
+  text-underline-offset: 5px;
+}
+
 li.menu_list-item_selected {
   list-style-type: none;
 }
 
-.menu_list-item_selected a {
+.menu_list-item_selected  a {
   text-decoration-line: none;
 }
 
-li.menu_list-item {
-  text-underline-offset: 5px;
-}
 
 .header-logo {
   grid-column: 2;
@@ -278,7 +279,11 @@ li.menu_list-item {
   list-style: none;
 }
 
-.footer__menu-list-item_selected {
+.footer__menu_list-item {
+  text-underline-offset: 5px;
+}
+
+li.footer__menu-list-item_selected a {
   text-decoration: none;
 }
 
