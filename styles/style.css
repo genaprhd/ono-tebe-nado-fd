@@ -57,11 +57,16 @@ li.menu_list-item_selected {
 
 .cover {
   position: relative;
-  z-index: 1;
   color: white;
   background-image: url(/images/cover.jpg);
   background-position: center;
   background-size: cover;
+}
+
+.cover h1 {
+  font-size: 100px;
+  letter-spacing: 0.3em;
+
 }
 
 .overlay {
@@ -78,11 +83,7 @@ li.menu_list-item_selected {
   position: inherit;
   display: grid;
   gap: 17px;
-  box-sizing: content-box;
   padding: 165px 20px 0 50px;
-  font-weight: 700;
-  font-size: 100px;
-  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
@@ -210,7 +211,7 @@ li.menu_list-item_selected {
 .about {
   display: grid;
   grid-template-columns: 336px repeat(2, 1fr) 5px;
-  grid-template-rows: 1fr 0.6fr 1.4fr;
+  grid-template-rows: 1fr min-content min-content;
   justify-content: center;
   column-gap: 21px;
   width: 1052px;
@@ -252,22 +253,22 @@ li.menu_list-item_selected {
 
 .about__text {
   grid-column: 2 / 4;
-  grid-row: 2 / 4;
-  align-self: top;
+  grid-row: 2 / 3;
   margin-top: 5px;
   margin-left: 3px;
   font-size: 20px;
   line-height: 24px;
 }
 
-.about__text + .about__text {
-  grid-row: 3 / 4;
+.about__text + .about__text{
+  grid-row: 3/4;
+  padding-top: 21px;
 }
 
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px 50px;
+  padding: 180px 50px;
   font-size: 18px;
 }
 
