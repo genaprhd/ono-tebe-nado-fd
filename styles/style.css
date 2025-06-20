@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 91px 50px;
+  padding: 92px 50px;
   font-size: 18px;
 }
 
@@ -11,7 +11,7 @@
   justify-self: start;
 }
 
-ul.menu_list {
+.menu_list {
   display: flex;
   gap: 32.8px;
   text-underline-offset: 4px;
@@ -23,12 +23,12 @@ ul.menu_list {
   text-underline-offset: 5px;
 }
 
-li.menu_list-item_selected {
+.menu_list-item_selected {
   list-style-type: none;
 }
 
 .menu_list-item_selected a {
-  text-decoration-line: none;
+  text-decoration: none;
 }
 
 .header-logo {
@@ -78,7 +78,7 @@ li.menu_list-item_selected {
 }
 
 .cover_text-container {
-  position: inherit;
+  position: relative;;
   display: grid;
   gap: 17px;
   padding: 165px 20px 0 50px;
@@ -101,7 +101,7 @@ li.menu_list-item_selected {
 }
 
 .cover__description {
-  position: inherit;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
